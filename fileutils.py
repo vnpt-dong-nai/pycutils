@@ -16,7 +16,7 @@ def loadYaml(filePath):
     f = codecs.open(filePath, 'r', encoding='utf-8')
     text = f.read()
     f.close()
-    return yaml.load( text )
+    return yaml.load( text , Loader=yaml.FullLoader)
 
 def loadText(filePath):    
     f = codecs.open(filePath, encoding='utf-8')
